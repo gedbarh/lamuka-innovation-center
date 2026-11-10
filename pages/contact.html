@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Lamuka Innovation Center</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a href="../index.html" class="brand">
+      <img src="../images/lamuka-logo.png"
+           alt="Lamuka Innovation Center Logo"
+           class="brand-logo">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="navigation" id="navigation">
+      <a href="../index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="programmes.html">Programmes</a>
+      <a href="impact-stories.html">Our Impact & Stories</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="donate.html" class="nav-button">Donate Now</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+   
+<!-- CONTACT HERO -->
+<section class="contact-hero">
+    <div class="contact-hero-content">
+      <span class="contact-eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
+  
+      <h1>Let's Connect and <span>Make an Impact.</span></h1>
+  
+      <p>
+        Whether you have a question, want to partner with us,
+        support our work or learn more about our programmes,
+        we are here to connect with you.
+      </p>
+  
+      <a href="#contact-information" class="contact-hero-btn">
+        Get in Touch <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+  
+<!-- CONTACT INFORMATION -->
+<section class="contact-information section" id="contact-information">
+
+    <div class="section-heading centered">
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h2>We Are Here to <span>Connect With You.</span></h2>
+      <p>
+        Reach out to us for enquiries, partnerships, programme information
+        or opportunities to support our work.
+      </p>
+    </div>
+  
+    <div class="contact-info-grid">
+  
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p>Send us your questions or enquiries.</p>
+        <a href="mailto:lamukainnovationcenter@gmail.com">
+          lamukainnovationcenter@gmail.com
+        </a>
+      </div>
+  
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p>We would be happy to speak with you.</p>
+        <a href="tel:+256788322433">+256 788 322 433</a>
+        <a href="tel:+256742366383">+256 742 366 383</a>
+      </div>
+  
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Visit Us</h3>
+        <p>Find us at our community-based centre.</p>
+        <span>Nakivale Refugee Settlement, Isingiro District, Uganda</span>
+      </div>
+  
+      <div class="contact-info-card">
+        <div class="contact-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Connect with us directly on WhatsApp.</p>
+        <a href="https://wa.me/256788322433" target="_blank" rel="noopener noreferrer">
+          Chat With Us
+        </a>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+
+<!-- CONTACT FORM SECTION -->
+<section class="contact-form-section section">
+
+    <div class="contact-form-container">
+  
+      <div class="contact-form-intro">
+        <span class="eyebrow">LET'S TALK</span>
+        <h2>Send Us a <span>Message.</span></h2>
+        <p>
+          Have a question, an idea, or an opportunity to collaborate?
+          Complete the form and tell us how we can connect with you.
+        </p>
+  
+        <div class="contact-form-note">
+          <i class="fas fa-handshake"></i>
+          <div>
+            <h3>Building Partnerships</h3>
+            <p>
+              We welcome conversations with organisations, partners,
+              volunteers and individuals who share our vision.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="contact-form-card">
+        <form id="contactForm" action="https://formspree.io/f/xnpprwon" method="POST">
+  
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" name="name"
+                placeholder="Enter your full name" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="email"
+                placeholder="Enter your email address" required>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject" name="subject" required>
+              <option value="">Select your enquiry</option>
+              <option value="General Enquiry">General Enquiry</option>
+              <option value="Programme Information">Programme Information</option>
+              <option value="Partnership Opportunity">Partnership Opportunity</option>
+              <option value="Volunteering">Volunteering</option>
+              <option value="Support and Donations">Support and Donations</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="contactMessage">Your Message</label>
+            <textarea id="contactMessage" name="message" rows="6"
+              placeholder="Write your message here..." required></textarea>
+          </div>
+  
+          <button type="submit" class="contact-submit-btn">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+    
+<!-- LOCATION MAP SECTION -->
+<section class="contact-location-section">
+
+    <div class="section-heading centered">
+      <span class="eyebrow">FIND OUR LOCATION</span>
+      <h2>Visit Us in <span>Nakivale.</span></h2>
+      <p>
+        We are based in Nakivale Refugee Settlement, Isingiro District,
+        Uganda. We welcome opportunities to connect with our community
+        and partners.
+      </p>
+    </div>
+  
+    
+<div class="contact-map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.6777923184204!2d30.949834916794877!3d-0.784042700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d99ff71738e8fb%3A0xfc117c2bde6ba034!2sLamuka%20Innovation%20Center!5e1!3m2!1sen!2sus!4v1793928464030!5m2!1sen!2sus"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+  
+  
+  </section>
+  
+
+
+  </main>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-container">
+  
+      <div class="footer-brand">
+        <img src="../images/lamuka-logo.png" alt="Lamuka Innovation Center Logo">
+        <p>
+          Empowering refugees and young people through skills,
+          entrepreneurship and innovation to build dignified futures.
+        </p>
+      </div>
+  
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="impact-stories.html">Our Impact & Stories</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donate.html">Donate Now</a>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> lamukainnovationcenter@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +256 788 322 433</p>
+        <p><i class="fas fa-phone"></i> +256 742 366 383</p>
+        <p><i class="fas fa-map-marker-alt"></i> Nakivale Refugee Settlement, Isingiro District, Uganda</p>
+        <p>P.O. BOX 421542, Mbarara, Uganda</p>
+      </div>
+  
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/p/cNmQuWBYxkGPMrBD/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/lamuka_innovation_center/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/lamuka-ug/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/lamuka_uganda" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.tiktok.com/@lamukainnovationcenter" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/256788322433" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2026 Lamuka Innovation Center. All Rights Reserved.</p>
+      <p>Empowering People. Transforming Communities.</p>
+    </div>
+  
+  </footer>
+  <script src="../script.js"></script>
+
+</body>
+</html>
