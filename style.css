@@ -6144,3 +6144,68 @@ body {
   }
 }
 
+/* =================================
+   MOBILE RESPONSIVENESS
+   TRAINING AREAS & COURSES
+================================= */
+
+@media screen and (max-width: 768px) {
+
+  .programmes-grid,
+  .training-grid,
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+    display: grid;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .programme-card,
+  .training-card,
+  .course-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .programme-card img,
+  .training-card img,
+  .course-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+
+  .programme-card h3,
+  .training-card h3,
+  .course-card h3 {
+    font-size: 23px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+
+  .programme-card p,
+  .training-card p,
+  .course-card p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .programme-card ul,
+  .training-card ul,
+  .course-card ul {
+    padding-left: 20px;
+  }
+
+  .programme-card li,
+  .training-card li,
+  .course-card li {
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+  }
+
+}
+
