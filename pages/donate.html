@@ -1,187 +1,592 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Support Lamuka Innovation Center in empowering refugees and young people through practical skills, entrepreneurship and innovation.">
-  <title>Donate | Lamuka Innovation Center</title>
+
+  <title>Support Us | Lamuka Innovation Center</title>
+
+  <meta name="description"
+    content="Support Lamuka Innovation Center and help refugees and young people access skills, entrepreneurship and opportunities.">
 
   <link rel="stylesheet" href="../style.css">
+
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    /* DONATION PAGE */
+
+    .donate-hero {
+      background: linear-gradient(120deg, #0B293E, #123B58);
+      color: #ffffff;
+      padding: 100px 8%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .donate-hero .eyebrow {
+      color: #FFB36B;
+      letter-spacing: 3px;
+    }
+
+    .donate-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin: 20px 0;
+      color: #ffffff;
+    }
+
+    .donate-hero h1 span {
+      color: #FFB36B;
+    }
+
+    .donate-hero p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+      color: #e7eef3;
+      font-size: 1.1rem;
+    }
+
+    .donate-hero .donate-hero-button {
+      display: inline-block;
+      padding: 15px 32px;
+      border-radius: 6px;
+      background: #FFB36B;
+      color: #123B58;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .donate-hero .donate-hero-button:hover {
+      background: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .donate-intro {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .donate-intro p {
+      line-height: 1.9;
+      color: #555;
+    }
+
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .donation-card {
+      padding: 35px 25px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border-bottom: 5px solid #168AC5;
+      transition: 0.3s ease;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .donation-card.orange {
+      border-bottom-color: #FFB36B;
+    }
+
+    .donation-card .donation-icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e8f5fc;
+      color: #168AC5;
+      font-size: 27px;
+      margin-bottom: 22px;
+    }
+
+    .donation-card.orange .donation-icon {
+      background: #fff0e2;
+      color: #e68b36;
+    }
+
+    .donation-card h3 {
+      color: #123B58;
+      margin-bottom: 12px;
+    }
+
+    .donation-card p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .donate-impact {
+      background: #f3f7fa;
+    }
+
+    .donate-impact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .donate-impact-content h2 {
+      color: #123B58;
+      margin-bottom: 20px;
+    }
+
+    .donate-impact-content p {
+      color: #555;
+      line-height: 1.9;
+      margin-bottom: 15px;
+    }
+
+    .donate-impact-list {
+      display: grid;
+      gap: 15px;
+    }
+
+    .donate-impact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 17px;
+      background: #ffffff;
+      border-radius: 9px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .donate-impact-item i {
+      color: #168AC5;
+      font-size: 22px;
+    }
+
+    .donate-impact-item strong {
+      color: #123B58;
+    }
+
+    .donate-contact {
+      background: linear-gradient(120deg, #123B58, #168AC5);
+      color: #ffffff;
+      text-align: center;
+      padding: 80px 8%;
+    }
+
+    .donate-contact h2 {
+      color: #ffffff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 18px;
+    }
+
+    .donate-contact h2 span {
+      color: #FFB36B;
+    }
+
+    .donate-contact p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #eef6fb;
+      line-height: 1.8;
+    }
+
+    .donate-contact .contact-donate-button {
+      display: inline-block;
+      background: #FFB36B;
+      color: #123B58;
+      padding: 15px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .donate-contact .contact-donate-button:hover {
+      background: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .donate-hero {
+        padding: 75px 6%;
+      }
+
+      .donate-impact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .donation-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <a href="../index.html" class="brand">
-    <img src="../Images/lamuka-logo.png"
-         alt="Lamuka Innovation Center Logo"
-         class="brand-logo">
-  </a>
+  <!-- HEADER -->
+  <header class="site-header">
 
-  <nav class="main-nav">
-    <a href="../index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="programmes.html">Programmes</a>
-    <a href="impact-stories.html">Our Impact & Stories</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="donate.html" class="donate-btn active">Donate Now</a>
-  </nav>
-</header>
-
-<!-- DONATE HERO -->
-<section class="page-hero">
-  <div class="page-hero-content">
-    <span class="eyebrow">BE PART OF THE CHANGE</span>
-    <h1>Support <span>Lamuka Innovation Center</span></h1>
-    <p>
-      Help us create opportunities, strengthen livelihoods and build
-      dignified futures for refugees and young people.
-    </p>
-  </div>
-</section>
-
-<!-- DONATION INTRODUCTION -->
-<section class="section">
-  <div class="section-heading centered">
-    <span class="eyebrow">MAKE A DIFFERENCE</span>
-    <h2>Every Contribution <span>Creates Opportunity</span></h2>
-    <p>
-      Lamuka Innovation Center is a refugee-led organization working
-      with refugees and host communities in Nakivale Refugee Settlement,
-      Uganda.
-    </p>
-  </div>
-
-  <div class="donate-content">
-    <h3>Why Support Lamuka?</h3>
-    <p>
-      Your support can help expand access to practical vocational skills,
-      entrepreneurship, financial literacy, digital education and
-      livelihood opportunities.
-    </p>
-
-    <p>
-      Together, we can empower women, young people and vulnerable
-      communities to develop their potential and build more independent
-      and dignified lives.
-    </p>
-  </div>
-</section>
-
-<!-- AREAS OF SUPPORT -->
-<section class="section">
-  <div class="section-heading centered">
-    <span class="eyebrow">YOUR SUPPORT MATTERS</span>
-    <h2>What Your Support <span>Can Help Us Do</span></h2>
-  </div>
-
-  <div class="programme-grid">
-
-    <div class="programme-card">
-      <i class="fas fa-graduation-cap"></i>
-      <h3>Skills Development</h3>
-      <p>
-        Support vocational and practical training that equips
-        participants with useful skills.
-      </p>
-    </div>
-
-    <div class="programme-card">
-      <i class="fas fa-lightbulb"></i>
-      <h3>Entrepreneurship</h3>
-      <p>
-        Help aspiring entrepreneurs develop business ideas and
-        strengthen small enterprises.
-      </p>
-    </div>
-
-    <div class="programme-card">
-      <i class="fas fa-laptop"></i>
-      <h3>Digital Inclusion</h3>
-      <p>
-        Expand access to computer skills, digital literacy and
-        technology-based opportunities.
-      </p>
-    </div>
-
-    <div class="programme-card">
-      <i class="fas fa-people-group"></i>
-      <h3>Community Empowerment</h3>
-      <p>
-        Strengthen opportunities for women, young people and
-        vulnerable community members.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- DONATION CTA -->
-<section class="section donate-cta">
-  <div class="section-heading centered">
-    <span class="eyebrow">JOIN US</span>
-    <h2>Let's Create Opportunities <span>Together</span></h2>
-    <p>
-      Interested in supporting our work? Contact our team to discuss
-      how you can contribute or partner with Lamuka Innovation Center.
-    </p>
-
-    <a href="contact.html" class="btn btn-primary">
-      <i class="fas fa-heart"></i> Contact Us to Donate
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <div class="footer-column">
+    <a href="../index.html" class="brand">
       <img src="../Images/lamuka-logo.png"
            alt="Lamuka Innovation Center Logo"
-           class="footer-logo">
-      <p>From Displacement to Opportunity.</p>
-      <p>Refugee-led. Community-driven.</p>
-    </div>
+           class="brand-logo">
+    </a>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="navigation" id="navigation">
       <a href="../index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="programmes.html">Programmes</a>
       <a href="impact-stories.html">Our Impact & Stories</a>
       <a href="contact.html">Contact Us</a>
-      <a href="donate.html">Donate Now</a>
-    </div>
+      <a href="donate.html" class="nav-button active">Donate Now</a>
+    </nav>
 
-    <div class="footer-column">
-      <h3>Contact Us</h3>
-      <p>Nakivale Refugee Settlement, Isingiro District, Uganda</p>
-      <p>P.O. Box 421542, Mbarara</p>
-      <p>lamukainnovationcenter@gmail.com</p>
-      <p>+256 788 322 433</p>
-      <p>+256 742 366 383</p>
-    </div>
+  </header>
 
-    <div class="footer-column">
-      <h3>Support Our Mission</h3>
+  <main>
+
+    <!-- DONATION HERO -->
+    <section class="donate-hero">
+
+      <span class="eyebrow">BE PART OF THE CHANGE</span>
+
+      <h1>
+        Invest in People.<br>
+        <span>Transform Futures.</span>
+      </h1>
+
       <p>
-        Work with us to expand skills, livelihoods and opportunities
-        for refugees and host communities.
+        Every opportunity begins with someone who believes in
+        possibility. Support Lamuka Innovation Center as we empower
+        refugees and young people through practical skills,
+        entrepreneurship and innovation.
       </p>
-      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+
+      <a href="contact.html" class="donate-hero-button">
+        <i class="fas fa-heart"></i> Support Our Mission
+      </a>
+
+    </section>
+
+    <!-- WHY SUPPORT US -->
+    <section class="section">
+
+      <div class="donate-intro">
+
+        <span class="eyebrow">YOUR SUPPORT MATTERS</span>
+
+        <h2>
+          Together, We Can Create
+          <span>Lasting Opportunities.</span>
+        </h2>
+
+        <p>
+          Lamuka Innovation Center is a refugee-led organization
+          based in Nakivale Refugee Settlement, Uganda.
+          We work with refugees and host communities to build
+          practical skills, promote entrepreneurship and create
+          pathways towards self-reliance.
+        </p>
+
+        <p>
+          Your support can strengthen our work and help more
+          people access opportunities to learn, innovate and
+          build dignified futures.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- AREAS OF SUPPORT -->
+    <section class="section section-soft">
+
+      <div class="section-heading centered">
+
+        <span class="eyebrow">WHERE YOUR SUPPORT GOES</span>
+
+        <h2>
+          Help Us Make a
+          <span>Difference.</span>
+        </h2>
+
+        <p>
+          Your contribution can help strengthen these important
+          areas of our community work.
+        </p>
+
+      </div>
+
+      <div class="donation-grid">
+
+        <div class="donation-card">
+
+          <div class="donation-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+
+          <h3>Skills Development</h3>
+
+          <p>
+            Support vocational and practical training that equips
+            refugees and young people with skills for employment
+            and self-reliance.
+          </p>
+
+        </div>
+
+        <div class="donation-card orange">
+
+          <div class="donation-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+
+          <h3>Entrepreneurship</h3>
+
+          <p>
+            Help aspiring entrepreneurs develop business ideas,
+            strengthen enterprises and create sustainable
+            livelihood opportunities.
+          </p>
+
+        </div>
+
+        <div class="donation-card">
+
+          <div class="donation-icon">
+            <i class="fas fa-laptop"></i>
+          </div>
+
+          <h3>Digital Inclusion</h3>
+
+          <p>
+            Expand access to computer training, digital literacy
+            and technology-based opportunities.
+          </p>
+
+        </div>
+
+        <div class="donation-card orange">
+
+          <div class="donation-icon">
+            <i class="fas fa-people-group"></i>
+          </div>
+
+          <h3>Community Empowerment</h3>
+
+          <p>
+            Strengthen opportunities for women, young people
+            and vulnerable members of refugee and host communities.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- OUR IMPACT -->
+    <section class="section donate-impact">
+
+      <div class="donate-impact-layout">
+
+        <div class="donate-impact-content">
+
+          <span class="eyebrow">FROM DISPLACEMENT TO OPPORTUNITY</span>
+
+          <h2>
+            Help Turn Potential
+            <span>Into Progress.</span>
+          </h2>
+
+          <p>
+            We believe that people are not defined by displacement
+            or difficult circumstances. With access to skills,
+            knowledge and opportunities, individuals can shape
+            their own futures and contribute to stronger communities.
+          </p>
+
+          <p>
+            By supporting Lamuka, you become part of a community-driven
+            effort to make this vision a reality.
+          </p>
+
+        </div>
+
+        <div class="donate-impact-list">
+
+          <div class="donate-impact-item">
+            <i class="fas fa-check-circle"></i>
+            <strong>Promote practical learning and skills development</strong>
+          </div>
+
+          <div class="donate-impact-item">
+            <i class="fas fa-check-circle"></i>
+            <strong>Strengthen entrepreneurship and livelihoods</strong>
+          </div>
+
+          <div class="donate-impact-item">
+            <i class="fas fa-check-circle"></i>
+            <strong>Expand opportunities for women and young people</strong>
+          </div>
+
+          <div class="donate-impact-item">
+            <i class="fas fa-check-circle"></i>
+            <strong>Build inclusive and resilient communities</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT TO DONATE -->
+    <section class="donate-contact">
+
+      <span class="eyebrow">JOIN OUR JOURNEY</span>
+
+      <h2>
+        Be Part of <span>Something Meaningful.</span>
+      </h2>
+
+      <p>
+        Interested in supporting our work, making a contribution
+        or exploring a partnership? Our team would be happy to
+        hear from you.
+      </p>
+
+      <a href="contact.html" class="contact-donate-button">
+        <i class="fas fa-envelope"></i> Contact Us to Donate
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- JAVASCRIPT -->
+  <script src="../script.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <a href="../index.html">
+          <img src="../Images/lamuka-logo.png"
+               alt="Lamuka Innovation Center Logo">
+        </a>
+
+        <p>
+          Empowering refugees and young people through skills,
+          entrepreneurship and innovation to build dignified futures.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <h3>Quick Links</h3>
+
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="impact-stories.html">Our Impact & Stories</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="donate.html">Donate Now</a>
+
+      </div>
+
+      <div class="footer-contact">
+
+        <h3>Contact Us</h3>
+
+        <p><i class="fas fa-envelope"></i>
+          lamukainnovationcenter@gmail.com</p>
+
+        <p><i class="fas fa-phone"></i> +256 788 322 433</p>
+
+        <p><i class="fas fa-phone"></i> +256 742 366 383</p>
+
+        <p><i class="fas fa-map-marker-alt"></i>
+          Nakivale Refugee Settlement, Isingiro District, Uganda</p>
+
+        <p>P.O. BOX 421542, Mbarara, Uganda</p>
+
+      </div>
+
+      <div class="footer-social">
+
+        <h3>Follow Us</h3>
+
+        <div class="social-icons">
+
+          <a href="https://www.facebook.com/share/p/cNmQuWBYxkGPMrBD/"
+             target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://www.instagram.com/lamuka_innovation_center/"
+             target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/company/lamuka-ug/"
+             target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <a href="https://x.com/lamuka_uganda"
+             target="_blank" aria-label="X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+
+          <a href="https://www.tiktok.com/@lamukainnovationcenter"
+             target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+
+          <a href="https://wa.me/256788322433"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
+    <div class="footer-bottom">
 
-  <div class="footer-bottom">
-    <p>&copy; 2026 Lamuka Innovation Center. All Rights Reserved.</p>
-  </div>
-</footer>
+      <p>© 2026 Lamuka Innovation Center. All Rights Reserved.</p>
+
+      <p>Empowering People. Transforming Communities.</p>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
