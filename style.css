@@ -6089,3 +6089,73 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* LAMUKA ACROSS THE WEB - SLIDER */
+
+.web-features-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.web-features-track {
+  display: flex;
+  width: max-content;
+  animation: web-features-slide 45s linear infinite;
+}
+
+.web-features-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: 22px;
+  padding-right: 22px;
+}
+
+.web-feature-card {
+  flex: 0 0 calc((100vw - 100px) / 3);
+  box-sizing: border-box;
+}
+
+.web-features-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes web-features-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.web-features-button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 28px;
+  background: #123B58;
+  color: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.web-features-button:hover {
+  background: #168AC5;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  .web-feature-card {
+    flex-basis: calc((100vw - 70px) / 2);
+  }
+}
+
+@media (max-width: 550px) {
+  .web-feature-card {
+    flex-basis: calc(100vw - 60px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .web-features-track {
+    animation: none;
+  }
+}
+
