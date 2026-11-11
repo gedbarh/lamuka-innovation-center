@@ -6220,3 +6220,10 @@ body {
     background: #ffffff;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
+/* ACTIVE NAVIGATION PAGE */
+.navigation a.active {
+    background: #FFB36B !important;
+    color: #0B293E !important;
+    border-radius: 6px;
+    font-weight: 700;
+}
