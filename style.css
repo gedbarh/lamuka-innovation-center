@@ -6220,10 +6220,9 @@ body {
     background: #ffffff;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
 }
-/* ACTIVE NAVIGATION PAGE */
+/* ACTIVE PAGE - ORANGE TEXT ONLY */
 .navigation a.active {
-    background: #FFB36B !important;
-    color: #0B293E !important;
-    border-radius: 6px;
+    background: transparent !important;
+    color: #FF8C32 !important;
     font-weight: 700;
 }
