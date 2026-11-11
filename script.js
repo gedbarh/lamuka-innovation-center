@@ -404,3 +404,18 @@ document.querySelectorAll(".partners-track").forEach(track => {
   }
 
 });
+
+
+// LAMUKA ACROSS THE WEB SLIDER
+document.querySelectorAll(".web-features-track").forEach(track => {
+  if (track.dataset.cloned === "true") return;
+
+  const group = track.querySelector(".web-features-group");
+
+  if (group) {
+    const clone = group.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    track.appendChild(clone);
+    track.dataset.cloned = "true";
+  }
+});
