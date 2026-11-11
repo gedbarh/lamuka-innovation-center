@@ -5996,6 +5996,19 @@ body {
 }
 
 /* LAMUKA ACROSS THE WEB - SLIDER */
+.web-features-section {
+  padding: 70px 20px;
+  background: #f4f8fb;
+}
+
+.web-features-section .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.web-features-section .section-heading h2 {
+  color: #123B58;
+}
 
 .web-features-slider {
   width: 100%;
