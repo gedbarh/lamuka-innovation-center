@@ -384,3 +384,23 @@ if (contactForm) {
       'Send Message <i class="fas fa-paper-plane"></i>';
   });
 }
+
+
+// PARTNERS CAROUSEL
+document.querySelectorAll(".partners-track").forEach(track => {
+
+  if (track.dataset.cloned === "true") return;
+
+  const originalGroup = track.querySelector(".partners-group");
+
+  if (originalGroup) {
+    const clonedGroup = originalGroup.cloneNode(true);
+
+    clonedGroup.setAttribute("aria-hidden", "true");
+
+    track.appendChild(clonedGroup);
+
+    track.dataset.cloned = "true";
+  }
+
+});
