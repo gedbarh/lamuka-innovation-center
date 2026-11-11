@@ -6211,3 +6211,12 @@ body {
   }
 }
 
+/* STICKY NAVIGATION MENU */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
