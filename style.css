@@ -6300,3 +6300,35 @@ body {
         font-size: 19px;
     }
 }
+
+
+/* SOCIAL MEDIA COMMUNITY MESSAGE */
+
+.social-community-message {
+    max-width: 700px;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+.social-community-message h3 {
+    color: #123B58;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.social-community-message p {
+    color: #5c6b75;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .social-community-message h3 {
+        font-size: 20px;
+    }
+
+    .social-community-message p {
+        font-size: 14px;
+    }
+}
