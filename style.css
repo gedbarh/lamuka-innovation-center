@@ -6226,3 +6226,77 @@ body {
     color: #FF8C32 !important;
     font-weight: 700;
 }
+
+
+/* =========================================
+   CONTACT PAGE - SOCIAL MEDIA SECTION
+========================================= */
+
+.contact-social-section {
+    background: #f4f8fb;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.contact-social-section .section-heading {
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.contact-social-section .section-heading h2 {
+    color: #123B58;
+}
+
+.contact-social-section .section-heading h2 span {
+    color: #168AC5;
+}
+
+.contact-social-section .section-heading p {
+    color: #5c6b75;
+    line-height: 1.8;
+}
+
+.contact-social-section .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.contact-social-section .social-icons a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #123B58;
+    color: #ffffff;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-social-section .social-icons a:hover {
+    background: #FF8C32;
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(18, 59, 88, 0.18);
+}
+
+@media (max-width: 600px) {
+    .contact-social-section {
+        padding: 45px 16px;
+    }
+
+    .contact-social-section .social-icons {
+        gap: 13px;
+    }
+
+    .contact-social-section .social-icons a {
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+    }
+}
