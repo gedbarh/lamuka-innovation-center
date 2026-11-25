@@ -185,6 +185,7 @@ if (storyTrack) {
   storyTrack.addEventListener("touchend", startStoryAutoSlide);
 }
 
+
 /* LAMUKA HERO SLIDESHOW */
 
 const heroSlides = document.querySelectorAll(".hero-slide");
@@ -198,60 +199,89 @@ let heroTimer;
 let heroProgressTimer;
 let heroProgress = 0;
 
+// Each slide remains visible for 9 seconds
+const HERO_SLIDE_DURATION = 9000;
+
 function showHeroSlide(index) {
-  heroSlides[currentHeroSlide].classList.remove("active");
-  heroDots[currentHeroSlide].classList.remove("active");
 
-  currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
+    if (!heroSlides.length) return;
 
-  heroSlides[currentHeroSlide].classList.add("active");
-  heroDots[currentHeroSlide].classList.add("active");
+    heroSlides[currentHeroSlide].classList.remove("active");
+    heroDots[currentHeroSlide].classList.remove("active");
+
+    currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
+
+    heroSlides[currentHeroSlide].classList.add("active");
+    heroDots[currentHeroSlide].classList.add("active");
 }
 
 function startHeroTimer() {
-  clearInterval(heroTimer);
-  clearInterval(heroProgressTimer);
 
-  heroProgress = 0;
-  heroProgressBar.style.width = "0%";
+    clearInterval(heroTimer);
+    clearInterval(heroProgressTimer);
 
-  heroProgressTimer = setInterval(() => {
-    heroProgress += 2;
-    heroProgressBar.style.width = heroProgress + "%";
-  }, 100);
+    heroProgress = 0;
+    heroProgressBar.style.width = "0%";
 
-  heroTimer = setInterval(() => {
-    showHeroSlide(currentHeroSlide + 1);
-    startHeroTimer();
-  }, 5000);
+    // Progress bar fills over exactly 9 seconds
+    heroProgressTimer = setInterval(() => {
+
+        heroProgress += 100 / (HERO_SLIDE_DURATION / 100);
+
+        if (heroProgress >= 100) {
+            heroProgress = 100;
+            clearInterval(heroProgressTimer);
+        }
+
+        heroProgressBar.style.width = heroProgress + "%";
+
+    }, 100);
+
+    // Automatically move to the next slide after 9 seconds
+    heroTimer = setTimeout(() => {
+
+        showHeroSlide(currentHeroSlide + 1);
+        startHeroTimer();
+
+    }, HERO_SLIDE_DURATION);
 }
 
 if (
-  heroSlides.length &&
-  heroDots.length &&
-  heroNext &&
-  heroPrev &&
-  heroProgressBar
+    heroSlides.length &&
+    heroDots.length &&
+    heroNext &&
+    heroPrev &&
+    heroProgressBar
 ) {
-  heroNext.addEventListener("click", () => {
-    showHeroSlide(currentHeroSlide + 1);
-    startHeroTimer();
-  });
 
-  heroPrev.addEventListener("click", () => {
-    showHeroSlide(currentHeroSlide - 1);
-    startHeroTimer();
-  });
+    heroNext.addEventListener("click", () => {
 
-  heroDots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      showHeroSlide(index);
-      startHeroTimer();
+        showHeroSlide(currentHeroSlide + 1);
+        startHeroTimer();
+
     });
-  });
 
-  startHeroTimer();
+    heroPrev.addEventListener("click", () => {
+
+        showHeroSlide(currentHeroSlide - 1);
+        startHeroTimer();
+
+    });
+
+    heroDots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+
+            showHeroSlide(index);
+            startHeroTimer();
+
+        });
+
+    });
+
+    startHeroTimer();
 }
+
 /* ==============================
    EXPAND AND COLLAPSE SUCCESS STORIES
 ================================ */
