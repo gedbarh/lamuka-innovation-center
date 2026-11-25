@@ -6478,3 +6478,31 @@ body {
     transform: translateY(-3px);
 }
 
+
+/* HOMEPAGE INTRODUCTION ACTION LINKS */
+.intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: 25px;
+}
+
+.intro-actions .text-link {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: #168AC5;
+    transition: color 0.3s ease;
+}
+
+.intro-actions .text-link:hover {
+    color: #FF8C32;
+}
+
+@media (max-width: 600px) {
+    .intro-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
