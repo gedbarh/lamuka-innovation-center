@@ -6412,3 +6412,47 @@ body {
     }
 }
 
+
+/* HOMEPAGE HERO CALL-TO-ACTION BUTTONS */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.hero-actions .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.hero-secondary-button {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 12px 22px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.hero-secondary-button:hover {
+    background: #ffffff;
+    color: #123B58;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .hero-actions {
+        gap: 10px;
+    }
+
+    .hero-actions .button {
+        font-size: 13px;
+        padding: 11px 15px;
+    }
+}
+
+
