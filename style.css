@@ -6456,3 +6456,25 @@ body {
 }
 
 
+/* FIX HOMEPAGE HERO SECONDARY BUTTONS */
+.hero-slider .hero-actions a.hero-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(18, 59, 88, 0.85) !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.hero-slider .hero-actions a.hero-secondary-button:hover {
+    background: #FF8C32 !important;
+    color: #ffffff !important;
+    border-color: #FF8C32 !important;
+    transform: translateY(-3px);
+}
+
